@@ -39,8 +39,7 @@
         "october/cms": "~1.0",
         "laravel/framework": "5.5.*",
         "wikimedia/composer-merge-plugin": "dev-master",
-        "rainlab/blog-plugin": "^1.3",
-        "matiku/oc-syntaxed-plugin": "dev-master"
+        "rainlab/blog-plugin": "^1.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.7",

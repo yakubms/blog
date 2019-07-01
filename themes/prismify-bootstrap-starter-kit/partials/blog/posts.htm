@@ -11,11 +11,11 @@ postPage = "blog/post"
 ==
 {% set posts = blogPosts.posts %}
 
-<div class="post-list">
-    {% for post in posts %}
-        <div class="media">
 
-            <div class="media-body">
+    {% for post in posts %}
+        <div class="card">
+
+            <div class="card-img-top">
                 <a href="{{ post.url }}">
                     {% if post.featured_images.count > 0 %}
                         <img class="media-object" src="{{ post.featured_images.first.getThumb(100, 'auto') }}" />
@@ -23,11 +23,14 @@ postPage = "blog/post"
                         <img class="media-object" src="https://via.placeholder.com/100" alt="placeholder"/>
                     {% endif %}
                 </a>
+            </div>
                 
-                <h4 class="media-heading">
+            <div class="card-body">
+                <h4 class="card-title">
                     <a href="{{ post.url }}">{{ post.title }}</a>
                 </h4>
-                <p class="info">
+                
+                <p class="card-text">
                     Posted
                     {% if post.categories.count %} in {% endif %}
                     {% for category in post.categories %}
@@ -37,20 +40,20 @@ postPage = "blog/post"
                 </p>
 
                 {% if post.excerpt %}
-                    <p class="excerpt">{{ post.excerpt }}</p>
+                    <p class="card-body">{{ post.excerpt }}</p>
                 {% else %}
-<div class="content">
-    {{ post.content_html|replace({'<pre>': '<pre class = "prettyprint linenums">','<code>':'','</code>':''}) | raw}}
-</div>
+                <div class="card-text">
+                    {{ post.content_html|replace({'<pre>': '<pre class = "prettyprint linenums">','<code>':'','</code>':''}) | raw}}
+                </div>
                 {% endif %}
             </div>
+            
         </div>
     {% else %}
         <div class="no-data">
             <p>{{ noPostsMessage }}</p>
         </div>
     {% endfor %}
-</div>
 
 {% if posts.lastPage > 1 %}
     <ul class="pagination">
