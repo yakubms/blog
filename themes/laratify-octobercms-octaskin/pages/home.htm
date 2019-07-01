@@ -1,0 +1,69 @@
+title = "Home"
+url = "/"
+layout = "octaskin"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "about"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "about"
+postPage = "about"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+==
+<section id="lt-slideshow" class="lt-section lt-section-fullwidth section">
+  <div class="lt-container container">
+    <div class="lt-content lt-slideshow-content">
+      {% partial "pages-home/slideshow" %}
+    </div>
+  </div>
+</section>
+
+<section id="lt-feature" class="lt-section section">
+  <div class="lt-container container">
+    <div class="lt-content lt-feature-content">
+        {% component 'blogPosts' %}
+    </div>
+  </div>
+</section>
+
+<section id="lt-utility" class="lt-section section">
+  <div class="lt-container container">
+    <div class="lt-content lt-utility-content">
+        {% component 'blogCategories' %}
+    </div>
+  </div>
+</section>
+
+<section id="lt-mainpage" class="lt-section lt-section-fullwidth section">
+  <div class="lt-container container">
+    <div class="lt-content lt-mainpage-content">
+      {% partial "pages-home/mainpage" %}
+    </div>
+  </div>
+</section>
+
+<section id="lt-bottom" class="lt-section section">
+  <div class="lt-container container">
+    <div class="lt-content lt-bottom-content">
+      {% partial "pages-home/bottom" %}
+    </div>
+  </div>
+</section>
+
+<section id="lt-extension" class="lt-section section">
+  <div class="lt-container container">
+    <div class="lt-content lt-extension-content">
+      {% partial "pages-home/extension" %}
+    </div>
+  </div>
+</section>

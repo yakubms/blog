@@ -1,0 +1,48 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{% if this.page.description %}{{ this.page.description }}{% else %}{{ this.theme.meta_description }}{% endif %}">
+        <meta name="keywords" content="{% if this.page.keywords %}{{ this.page.keywords }}{% else %}{{ this.theme.meta_keywords }}{% endif %}">
+        <meta name="title" content="{% if this.page.title %}{{ this.page.title }}{% else %}{{ this.theme.meta_title }}{% endif %}">
+        <meta name="author" content="{{ this.theme.website_author }}">
+        <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/lang-css.min.js"></script>
+
+        <link href="{{ 'assets/css/app.css'|theme }}" rel="stylesheet">
+        <script src="{{ 'assets/js/app.js'|theme }}"></script>
+        {% scripts %}
+    {% framework extras %}
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded',function() {
+        prettyPrint();
+    });
+</script>        
+        
+        {% styles %}
+        <title>{% if this.page.title %}{{ this.page.title }}{% else %}{{ this.theme.meta_title }}{% endif %} - {{ this.theme.website_name }}</title>
+    </head>
+    <body class="layout-{{ this.layout.id }} page-{{ this.page.id }}">
+        <header id="site-header" class="site-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <div class="container">
+                {% page %}
+        </div>
+
+        <small id="site-footer" class="site-footer">
+            {% partial 'site/footer' %}
+        </small>
+
+
+    </body>
+
+</html>

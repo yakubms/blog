@@ -1,0 +1,42 @@
+php_errors.log
+nginx-error.log
+nginx-access.log
+nginx-ssl.access.log
+nginx-ssl.error.log
+php-errors.log
+sftp-config.json
+.ftpconfig
+composer.lock
+
+# for netbeans
+nbproject
+
+/bootstrap/compiled.php
+composer.phar
+.idea
+*.env
+.env
+.env.*.php
+.env.php
+*.log
+sftp-config.json
+selenium.php
+
+# OS or editor misc files
+*~
+*.bak
+Thumbs.db
+desktop.ini
+.DS_Store
+proxy.pac
+
+# for netbeans
+nbproject
+
+# Eclipse setting files
+.buildpath
+.project
+.settings
+
+# IDE Helper
+_ide_helper*.php
