@@ -30,9 +30,6 @@ desktop.ini
 .DS_Store
 proxy.pac
 
-# for netbeans
-nbproject
-
 # Eclipse setting files
 .buildpath
 .project
@@ -40,3 +37,11 @@ nbproject
 
 # IDE Helper
 _ide_helper*.php
+
+### PHP Coding Standards Fixer ###
+.php_cs.cache
+
+## Laravel Homestead ##
+/.vagrant
+Homestead.yaml
+Homestead.json

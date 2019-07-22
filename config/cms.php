@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'backendTimezone' => 'UTC',
+    'backendTimezone' => 'Asia/Tokyo',
 
     /*
     |--------------------------------------------------------------------------
@@ -235,7 +235,7 @@ return [
     |
     */
 
-    'databaseTemplates' => false,
+    'databaseTemplates' => env('DATABASE_TEMPLATES', false),
 
     /*
     |--------------------------------------------------------------------------
