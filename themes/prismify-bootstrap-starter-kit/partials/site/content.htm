@@ -14,12 +14,23 @@ postPage = "blog/post"
 slug = "{{ :slug }}"
 displayEmpty = 0
 categoryPage = "blog/category"
+
+[searchForm]
+resultPage = "blog/search"
+categoryFilter = 0
 ==
 <div class="row">
     <div class="col-md-10">
         {% partial 'blog/posts' %}
     </div>
     <div class="col-md-2">
-        {% partial 'blog/categories' %}
+        <dl class="list-unstyled">
+            <dt class="mb-1">Search</dt>
+            <dd class="mb-4">{% component 'searchForm' %}</dd>
+            <dt class="mb-1">Categories</dt>
+            <dd>{% partial 'blog/categories' %}</dd>
+            <dt class="mt-4">RSS</dt>
+            <dd><a href="/rss.xml">RSS</a></dd>
+        </dl>
     </div>
 </div>
