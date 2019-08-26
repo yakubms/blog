@@ -43,7 +43,7 @@ postPage = "blog/post"
                     <p class="card-body">{{ post.excerpt }}</p>
                 {% else %}
                 <div class="card-text">
-                    {{ post.content_html|replace({'<pre>': '<pre class = "prettyprint linenums">','<code>':'','</code>':''}) | raw}}
+                    {{ post.content_html | raw}}
                 </div>
                 {% endif %}
                 
