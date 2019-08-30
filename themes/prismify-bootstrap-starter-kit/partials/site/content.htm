@@ -2,14 +2,6 @@ description = "Site Content"
 
 [viewBag]
 
-[blogPosts]
-pageNumber = "{{ :page }}"
-postsPerPage = 10
-noPostsMessage = "No posts found"
-sortOrder = "published_at desc"
-categoryPage = "blog/category"
-postPage = "blog/post"
-
 [blogCategories]
 slug = "{{ :slug }}"
 displayEmpty = 0
@@ -18,19 +10,22 @@ categoryPage = "blog/category"
 [searchForm]
 resultPage = "blog/search"
 categoryFilter = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
 ==
 <div class="row">
     <div class="col-md-10">
         {% partial 'blog/posts' %}
+        {% partial 'blog/paginator' %}
     </div>
     <div class="col-md-2">
-        <dl class="list-unstyled">
-            <dt class="mb-1">Search</dt>
-            <dd class="mb-4">{% component 'searchForm' %}</dd>
-            <dt class="mb-1">Categories</dt>
-            <dd>{% partial 'blog/categories' %}</dd>
-            <dt class="mt-4">RSS</dt>
-            <dd><a href="/rss.xml">RSS</a></dd>
-        </dl>
+        {% partial 'site/menu' %}
     </div>
 </div>

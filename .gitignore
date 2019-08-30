@@ -6,7 +6,7 @@ nginx-ssl.error.log
 php-errors.log
 sftp-config.json
 .ftpconfig
-composer.lock
+rss.xml
 
 # for netbeans
 nbproject

@@ -1,0 +1,15 @@
+==
+<nav class="mt-2" aria-label="next-and-prev">
+    <ul class="pagination justify-content-between">
+        {% if post.previousPost %}
+        <li>
+            <a class="btn page-link rounded-pill" href="/post/{{ post.previousPost.slug }}">新しい記事 - {{ post.previousPost.title }}</a>
+        </li>
+        {% endif %}
+        {% if post.nextPost %}
+        <li>
+            <a class="btn page-link rounded-pill" href="/post/{{ post.nextPost.slug }}">古い記事 - {{ post.nextPost.title }}</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>

@@ -10,15 +10,23 @@ description = "Default layout"
         <meta name="title" content="{% if this.page.title %}{{ this.page.title }}{% else %}{{ this.theme.meta_title }}{% endif %}">
         <meta name="author" content="{{ this.theme.website_author }}">
         <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet" type="text/css" />
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/tomorrow-night-eighties.min.css">
-
         <link href="{{ 'assets/css/app.css'|theme }}" rel="stylesheet">
-    {% styles %}
+        {% styles %}
+        <style>
+h2 {
+  font-size: 1.5rem;
+  margin: 0.5em;
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  border-left: solid 5px #7db4e6;
+}
+        </style>
         <title>{% if this.page.title %}{{ this.page.title }}{% else %}{{ this.theme.meta_title }}{% endif %} - {{ this.theme.website_name }}</title>
     </head>
     <body class="layout-{{ this.layout.id }} page-{{ this.page.id }}">
@@ -30,13 +38,11 @@ description = "Default layout"
             <div class="jumbotron jumbotron-fluid bg-light">
                 <div class="container">
                     <h1 style="font-family: 'Open Sans', sans-serif;
-">{{ this.page.title }}</h1>
+">{{ this.page.title }}</h2>
                     <p>{{ this.page.description }}</p>
                 </div>
             </div>
-        
-        
-        
+                
         <div class="container-fluid">
                 {% page %}
         </div>

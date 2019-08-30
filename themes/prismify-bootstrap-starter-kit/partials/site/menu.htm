@@ -1,0 +1,17 @@
+[searchForm]
+resultPage = "blog/search"
+categoryFilter = 0
+==
+<dl class="list-unstyled">
+    <dt class="mb-1">About</dt>
+    <dd>author: boundman</dd>
+    <dd>Laravel, Vue.js, OctoberCMS等についての学習記録です。</dd>
+    <dt>Todo</dt>
+    <dd>エントリの月別表示機能、コメント機能の作成、aboutページの作成などなど……。</dd>
+    <dt class="mb-1">Search</dt>
+    <dd class="mb-4">{% component 'searchForm' %}</dd>
+    <dt class="mb-1">Categories</dt>
+    <dd>{% partial 'blog/categories' %}</dd>
+    <dt class="mt-4">RSS</dt>
+    <dd><a href="/rss.xml">RSS</a></dd>
+</dl>

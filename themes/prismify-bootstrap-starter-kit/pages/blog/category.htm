@@ -2,16 +2,14 @@ title = "カテゴリ"
 url = "/category/:slug/:page?"
 layout = "default"
 is_hidden = 0
-
 [blogCategories]
 slug = "{{ :slug }}"
 displayEmpty = 0
 categoryPage = "blog/category"
-
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "{{ :slug }}"
-postsPerPage = 10
+postsPerPage = 5
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
@@ -20,8 +18,9 @@ postPage = "blog/post"
 <div class="row">
     <div class="col-md-10">
         {% partial 'blog/posts' %}
+        {% partial 'blog/paginator' %}
     </div>
     <div class="col-md-2">
-        {% partial 'blog/categories' %}
+        {% partial 'site/menu' %}
     </div>
 </div>

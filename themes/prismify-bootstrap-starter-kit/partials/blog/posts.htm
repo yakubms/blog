@@ -1,5 +1,4 @@
 [viewBag]
-
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "{{ :slug }}"
@@ -10,68 +9,10 @@ categoryPage = "blog/category"
 postPage = "blog/post"
 ==
 {% set posts = blogPosts.posts %}
-
-
-    {% for post in posts %}
-        <div class="card">
-
-            <div class="card-img-top">
-                <a href="{{ post.url }}">
-                    {% if post.featured_images.count > 0 %}
-                        <img class="media-object" src="{{ post.featured_images.first.getThumb(100, 'auto') }}" />
-                    {% else %}
-                        <img class="media-object" src="https://via.placeholder.com/100" alt="placeholder"/>
-                    {% endif %}
-                </a>
-            </div>
-                
-            <div class="card-body">
-                <h4 class="card-title">
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </h4>
-                
-                <p class="card-text">
-                    Posted
-                    {% if post.categories.count %} in {% endif %}
-                    {% for category in post.categories %}
-                        <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
-                    {% endfor %}
-                    on {{ post.published_at|date('M d, Y') }}
-                </p>
-
-                {% if post.excerpt %}
-                    <p class="card-body">{{ post.excerpt }}</p>
-                {% else %}
-                <div class="card-text">
-                    {{ post.content_html | raw}}
-                </div>
-                {% endif %}
-                
-            
-      
-            </div>
-            
-        </div>
-    {% else %}
-        <div class="no-data">
-            <p>{{ noPostsMessage }}</p>
-        </div>
-    {% endfor %}
-
-{% if posts.lastPage > 1 %}
-    <ul class="pagination">
-        {% if posts.currentPage > 1 %}
-            <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
-        {% endif %}
-
-        {% for page in 1..posts.lastPage %}
-            <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
-                <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
-            </li>
-        {% endfor %}
-
-        {% if posts.lastPage > posts.currentPage %}
-            <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
-        {% endif %}
-    </ul>
-{% endif %}
+{% for post in posts %}
+{% partial 'blog/postbody' post=post %}
+{% else %}
+<div class="no-data">
+    <p>{{ noPostsMessage }}</p>
+</div>
+{% endfor %}

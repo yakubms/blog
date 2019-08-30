@@ -1,0 +1,24 @@
+==
+{% if posts.lastPage > 1 %}
+<ul class="list-inline mt-2">
+    {% if posts.currentPage > 1 %}
+    <li class="list-inline-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">前へ</a></li>
+    {% endif %}
+    {% if posts.lastPage > posts.currentPage %}
+    <li class="list-inline-item ml-3"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">次へ</a></li>
+    {% endif %}
+</ul>
+<ul class="pagination mt-2">
+    {% if posts.currentPage > 2 %}
+    <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): 1 }) }}">&lt;&lt;</a></li>
+    {% endif %}
+    {% set start = posts.currentPage > 3 ? posts.currentPage - 3 : 1 %}
+    {% set end = posts.currentPage < posts.lastPage - 1 ? posts.currentPage + 3 : posts.lastPage %} {% for page in start..end %} <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
+        <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+        </li>
+        {% endfor %}
+        {% if posts.lastPage > posts.currentPage + 1 %}
+        <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): posts.lastPage }) }}">&gt;&gt;</a></li>
+        {% endif %}
+</ul>
+{% endif %}

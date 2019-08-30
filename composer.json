@@ -5,31 +5,32 @@
     "keywords": ["october", "cms", "octobercms", "laravel"],
     "license": "MIT",
     "authors": [
-        {
-            "name": "Alexey Bobkov",
-            "email": "aleksey.bobkov@gmail.com",
-            "role": "Co-founder"
-        },
-        {
-            "name": "Samuel Georges",
-            "email": "daftspunky@gmail.com",
-            "role": "Co-founder"
-        },
-        {
-            "name": "Luke Towers",
-            "email": "octobercms@luketowers.ca",
-            "homepage": "https://luketowers.ca",
-            "role": "Maintainer"
-        }
-    ],
-    "support": {
+    {
+        "name": "Alexey Bobkov",
+        "email": "aleksey.bobkov@gmail.com",
+        "role": "Co-founder"
+    },
+    {
+        "name": "Samuel Georges",
+        "email": "daftspunky@gmail.com",
+        "role": "Co-founder"
+    },
+    {
+        "name": "Luke Towers",
+        "email": "octobercms@luketowers.ca",
+        "homepage": "https://luketowers.ca",
+        "role": "Maintainer"
+    }],
+    "support":
+    {
         "issues": "https://github.com/octobercms/october/issues",
         "forum": "https://octobercms.com/forum/",
         "docs": "https://octobercms.com/docs/",
         "irc": "irc://irc.freenode.net/october",
         "source": "https://github.com/octobercms/october"
     },
-    "require": {
+    "require":
+    {
         "php": ">=7.0",
         "ext-mbstring": "*",
         "ext-openssl": "*",
@@ -39,23 +40,37 @@
         "october/cms": "~1.0",
         "laravel/framework": "5.5.*",
         "wikimedia/composer-merge-plugin": "dev-master",
+        "rainlab/user-plugin": "^1.5",
+        "pkleindienst/blogsearch": "dev-master",
+        "sobored/rss": "dev-master",
         "rainlab/blog-plugin": "^1.3"
     },
-    "require-dev": {
+    "require-dev":
+    {
         "fzaninotto/faker": "~1.7",
         "phpunit/phpunit": "~5.7",
         "phpunit/phpunit-selenium": "~1.2",
         "meyfa/phpunit-assert-gd": "1.1.0",
-        "laravel/homestead": "^7.20"
+        "laravel/homestead": "^7.20",
+        "davidbadura/faker-markdown-generator": "^1.0"
     },
-    "autoload-dev": {
+    "autoload":
+    {
+        "psr-4":
+        {
+            "Acme\\": "src/"
+        }
+    },
+    "autoload-dev":
+    {
         "classmap": [
             "tests/TestCase.php",
             "tests/UiTestCase.php",
             "tests/PluginTestCase.php"
         ]
     },
-    "scripts": {
+    "scripts":
+    {
         "post-create-project-cmd": [
             "php artisan key:generate",
             "php artisan package:discover"
@@ -65,16 +80,20 @@
             "php artisan package:discover"
         ]
     },
-    "config": {
+    "config":
+    {
         "preferred-install": "dist",
-        "platform": {
+        "platform":
+        {
             "php": "7.0"
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "extra": {
-        "merge-plugin": {
+    "extra":
+    {
+        "merge-plugin":
+        {
             "include": [
                 "plugins/*/*/composer.json"
             ],
@@ -85,18 +104,34 @@
     },
 
     "repositories": [
+    {
+        "type": "package",
+        "package":
         {
-            "type": "package",
-            "package": {
-                "name": "matiku/oc-syntaxed-plugin",
-                "type": "october-plugin",
-                "version": "dev-master",
-                "source": {
-                    "url": "https://github.com/karingisi/syntaxed",
-                    "type": "git",
-                    "reference": "master"
-                }
+            "name": "sobored/rss",
+            "type": "october-plugin",
+            "version": "dev-master",
+            "source":
+            {
+                "url": "https://github.com/jbh/oc-blog-rss-plugin",
+                "type": "git",
+                "reference": "master"
             }
         }
-    ]
+    },
+    {
+        "type": "package",
+        "package":
+        {
+            "name": "pkleindienst/blogsearch",
+            "type": "october-plugin",
+            "version": "dev-master",
+            "source":
+            {
+                "url": "https://github.com/PascalKleindienst/october-blogsearch-extension",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    }]
 }
