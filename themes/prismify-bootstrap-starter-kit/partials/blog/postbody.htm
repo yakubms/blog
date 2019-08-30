@@ -19,9 +19,9 @@
                 {% for category in post.categories %}
                 <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
                 {% endfor %}</li>
-            <li class="my-1">投稿 {{ post.published_at|date('Y年m月d日 H時i分')}}</li>
+            <li class="my-1">投稿 {{ post.published_at| localizeddate('long', 'none', 'ja_JP', 'Asia/Tokyo', 'Y年MM月dd日 H時mm分') }}</li>
             {% if post.published_at < post.updated_at %} <li class="my-1">更新
-                {{ post.updated_at|date('Y年m月d日') }}</li>
+                {{ post.updated_at|localizeddate('long', 'none', 'ja_JP', 'Asia/Tokyo', 'Y年MM月dd日') }}</li>
                 {% endif %}
                 {% if post.excerpt %}
                 <p class="card-body">{{ post.excerpt }}</p>

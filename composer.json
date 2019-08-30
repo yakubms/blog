@@ -43,7 +43,9 @@
         "rainlab/user-plugin": "^1.5",
         "pkleindienst/blogsearch": "dev-master",
         "sobored/rss": "dev-master",
-        "rainlab/blog-plugin": "^1.3"
+        "rainlab/blog-plugin": "^1.3",
+        "symfony/translation": "4.3.4 as 3.3.9",
+        "vojtasvoboda/oc-twigextensions-plugin": "^1.2"
     },
     "require-dev":
     {
@@ -85,7 +87,7 @@
         "preferred-install": "dist",
         "platform":
         {
-            "php": "7.0"
+            "php": "7.3"
         }
     },
     "minimum-stability": "dev",
