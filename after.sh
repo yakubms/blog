@@ -7,3 +7,9 @@
 # If you have user-specific configurations you would like
 # to apply, you may also create user-customizations.sh,
 # which will be run after this script.
+
+# mysql
+# set timezone to JTC
+sudo mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+sudo sh -c "echo \"default-time-zone = 'Asia/Tokyo'\" >> /etc/mysql/mysql.conf.d/mysqld.cnf"
+sudo service mysql restart

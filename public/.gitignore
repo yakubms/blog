@@ -1,4 +1,2 @@
-# If you use public directory, you need to exec the below command.
-# php artisan october:mirror public/
 *
 !.gitignore

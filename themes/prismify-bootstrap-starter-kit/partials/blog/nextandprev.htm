@@ -1,14 +1,21 @@
 ==
-<nav class="mt-2" aria-label="next-and-prev">
-    <ul class="pagination justify-content-between">
+<?php
+function onStart()
+{
+    $this['display'] = $this['hidden'] ? ' d-block d-sm-none' : '';
+}
+?>
+==
+<nav class="my-2{{ display }}" aria-label="next-and-prev">
+    <ul class="row pagination justify-content-between">
         {% if post.previousPost %}
-        <li>
-            <a class="btn page-link rounded-pill" href="/post/{{ post.previousPost.slug }}">新しい記事 - {{ post.previousPost.title }}</a>
+        <li class="col-sm-5">
+            <a class="page-link text-wrap" href="/post/{{ post.previousPost.slug }}">新しい記事 - {{ post.previousPost.title }}</a>
         </li>
         {% endif %}
         {% if post.nextPost %}
-        <li>
-            <a class="btn page-link rounded-pill" href="/post/{{ post.nextPost.slug }}">古い記事 - {{ post.nextPost.title }}</a>
+        <li class="col-sm-5">
+            <a class="page-link text-wrap" href="/post/{{ post.nextPost.slug }}">古い記事 - {{ post.nextPost.title }}</a>
         </li>
         {% endif %}
     </ul>

@@ -2,6 +2,7 @@ title = "Post"
 url = "/post/:slug"
 layout = "default"
 is_hidden = 0
+
 [blogPost]
 slug = "{{ :slug }}"
 categoryPage = "blog/category"
@@ -16,6 +17,7 @@ function onEnd() {
 ==
 <div class="row">
     <div class="col-md-10">
+        {% partial 'blog/nextandprev' hidden=true %}
         {% partial 'blog/postbody' %}
         {% partial 'blog/nextandprev' %}
     </div>
