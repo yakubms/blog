@@ -2,10 +2,12 @@ title = "カテゴリ"
 url = "/category/:slug/:page?"
 layout = "default"
 is_hidden = 0
+
 [blogCategories]
 slug = "{{ :slug }}"
 displayEmpty = 0
 categoryPage = "blog/category"
+
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "{{ :slug }}"

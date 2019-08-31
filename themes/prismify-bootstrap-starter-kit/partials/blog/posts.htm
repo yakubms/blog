@@ -8,7 +8,6 @@ sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
 ==
-{% set posts = blogPosts.posts %}
 {% for post in posts %}
 {% partial 'blog/postbody' post=post %}
 {% else %}

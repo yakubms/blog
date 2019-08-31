@@ -1,0 +1,37 @@
+title = "検索結果"
+url = "/search/:search?/:page?"
+layout = "default"
+is_hidden = 0
+[searchResult]
+searchTerm = "{{ :search }}"
+pageNumber = "{{ :page }}"
+hightlight = 1
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+excludeCategories[] = 1
+excludeCategories[] = 2
+excludeCategories[] = 3
+categoryPage = "blog"
+postPage = "/posts"
+[searchForm]
+resultPage = "blog/search"
+categoryFilter = 0
+==
+<?php
+function onEnd() {
+    $this->page->title = $this['searchTerm'] . 'の検索結果: ' . $this->posts->total() . '件';
+    $this->page->title .= $this->posts->total() ?
+         '（' . $this->posts->currentPage() . '/' . $this->posts->lastPage() . 'ページ）' : '';
+}
+?>
+==
+<div class="row">
+    <div class="col-md-10">
+        {% partial 'blog/posts' posts=posts %}
+        {% partial 'blog/paginator' %}
+    </div>
+    <div class="col-md-2">
+        {% partial 'site/menu' %}
+    </div>
+</div>
