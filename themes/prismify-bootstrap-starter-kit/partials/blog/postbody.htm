@@ -1,11 +1,11 @@
 ==
-<div class="card">
+<div class="card mb-3">
     <div class="card-img-top">
         <a href="{{ post.url }}">
             {% if post.featured_images.count > 0 %}
             <img class="media-object" src="{{ post.featured_images.first.getThumb(150, 'auto') }}" />
             {% else %}
-            <img class="media-object" src="https://7414.tk/storage/app/media/october.jpg" alt="placeholder" width="150" height="150"/>
+            <img class="media-object" src="https://7414.tk/storage/app/media/october.jpg" alt="placeholder" width="150" height="150" />
             {% endif %}
         </a>
     </div>

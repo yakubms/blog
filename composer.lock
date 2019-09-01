@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7ea66830a993867c9210522b04b176a",
+    "content-hash": "1d81d5ea90efa298b688fcba32076ca0",
     "packages": [
         {
             "name": "composer/installers",
@@ -1492,18 +1492,18 @@
             "authors": [
                 {
                     "name": "Joost Faassen",
-                    "email": "j.faassen@linkorb.com",
-                    "role": "Packaging for Composer"
+                    "role": "Packaging for Composer",
+                    "email": "j.faassen@linkorb.com"
                 },
                 {
                     "name": "Ryan Grove",
-                    "email": "ryan@wonko.com",
-                    "role": "PHP port"
+                    "role": "PHP port",
+                    "email": "ryan@wonko.com"
                 },
                 {
                     "name": "Adam Gofort",
-                    "email": "aag@adamgoforth.com",
-                    "role": "Updates to the PHP port"
+                    "role": "Updates to the PHP port",
+                    "email": "aag@adamgoforth.com"
                 },
                 {
                     "name": "Douglas Crockford",
@@ -2137,7 +2137,7 @@
             "time": "2018-07-02T15:55:56+00:00"
         },
         {
-            "name": "pkleindienst/blogsearch",
+            "name": "pkleindienst/oc-blogsearch-plugin",
             "version": "dev-master",
             "source": {
                 "type": "git",
@@ -2411,16 +2411,16 @@
         },
         {
             "name": "rainlab/user-plugin",
-            "version": "v1.5.0",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rainlab/user-plugin.git",
-                "reference": "d0900697452bceb159c7bb17da62cc970eb1d8b9"
+                "reference": "d9a93a8d689842a9b8b345cf431777022e5996b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rainlab/user-plugin/zipball/d0900697452bceb159c7bb17da62cc970eb1d8b9",
-                "reference": "d0900697452bceb159c7bb17da62cc970eb1d8b9",
+                "url": "https://api.github.com/repos/rainlab/user-plugin/zipball/d9a93a8d689842a9b8b345cf431777022e5996b3",
+                "reference": "d9a93a8d689842a9b8b345cf431777022e5996b3",
                 "shasum": ""
             },
             "require": {
@@ -2438,13 +2438,13 @@
             "authors": [
                 {
                     "name": "Alexey Bobkov",
-                    "role": "Co-founder",
-                    "email": "aleksey.bobkov@gmail.com"
+                    "email": "aleksey.bobkov@gmail.com",
+                    "role": "Co-founder"
                 },
                 {
                     "name": "Samuel Georges",
-                    "role": "Co-founder",
-                    "email": "daftspunky@gmail.com"
+                    "email": "daftspunky@gmail.com",
+                    "role": "Co-founder"
                 }
             ],
             "description": "User plugin for October CMS",
@@ -2454,7 +2454,7 @@
                 "octobercms",
                 "user"
             ],
-            "time": "2019-06-22T02:20:00+00:00"
+            "time": "2019-09-01T02:12:22+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -2539,7 +2539,18 @@
             "time": "2018-07-19T23:38:55+00:00"
         },
         {
-            "name": "sobored/rss",
+            "name": "saurabhdhariwal/oc-comments-plugin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yakubms/octobercms-plugin",
+                "reference": "master"
+            },
+            "type": "october-plugin",
+            "time": "2019-09-01T06:21:10+00:00"
+        },
+        {
+            "name": "sobored/oc-rss-plugin",
             "version": "dev-master",
             "source": {
                 "type": "git",
@@ -3889,8 +3900,8 @@
             "authors": [
                 {
                     "name": "Tijs Verkoyen",
-                    "email": "css_to_inline_styles@verkoyen.eu",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "css_to_inline_styles@verkoyen.eu"
                 }
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
@@ -3942,19 +3953,19 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
+                    "role": "Lead Developer",
                     "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "homepage": "http://fabien.potencier.org"
                 },
                 {
                     "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com",
-                    "role": "Project Founder"
+                    "role": "Project Founder",
+                    "email": "armin.ronacher@active-4.com"
                 },
                 {
                     "name": "Twig Team",
-                    "homepage": "https://twig.symfony.com/contributors",
-                    "role": "Contributors"
+                    "role": "Contributors",
+                    "homepage": "https://twig.symfony.com/contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -4719,8 +4730,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sb@sebastian-bergmann.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sb@sebastian-bergmann.de"
                 }
             ],
             "description": "FilterIterator implementation that filters files based on a list of suffixes.",
@@ -4761,8 +4772,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Simple template engine.",
@@ -4810,8 +4821,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sb@sebastian-bergmann.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sb@sebastian-bergmann.de"
                 }
             ],
             "description": "Utility class for timing",
@@ -5049,13 +5060,13 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sb@sebastian-bergmann.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sb@sebastian-bergmann.de"
                 },
                 {
                     "name": "Giorgio Sironi",
-                    "email": "info@giorgiosironi.com",
-                    "role": "developer"
+                    "role": "developer",
+                    "email": "info@giorgiosironi.com"
                 }
             ],
             "description": "Selenium Server integration for PHPUnit",
@@ -5572,8 +5583,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
@@ -5635,8 +5646,9 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "wikimedia/composer-merge-plugin": 20,
-        "pkleindienst/blogsearch": 20,
-        "sobored/rss": 20
+        "pkleindienst/oc-blogsearch-plugin": 20,
+        "sobored/oc-rss-plugin": 20,
+        "saurabhdhariwal/oc-comments-plugin": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

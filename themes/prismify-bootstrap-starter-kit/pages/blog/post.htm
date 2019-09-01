@@ -2,7 +2,7 @@ title = "Post"
 url = "/post/:slug"
 layout = "default"
 is_hidden = 0
-
+[commentsPost]
 [blogPost]
 slug = "{{ :slug }}"
 categoryPage = "blog/category"
@@ -20,6 +20,7 @@ function onEnd() {
         {% partial 'blog/nextandprev' hidden=true %}
         {% partial 'blog/postbody' %}
         {% partial 'blog/nextandprev' %}
+        {% partial 'comments/default' %}
     </div>
     <div class="col-md-2">
         {% partial 'site/menu' %}

@@ -1,0 +1,18 @@
+==
+<?php
+    function onStart() {
+        $this['count'] = sizeof($this['posts']);
+    }
+?>
+==
+<div class="col-xs-6" id="comments-content">
+    {% if(count) > 0 %}
+    <h3 class="comments-count text-right"><span id="comments-count">{{ count }}</span> comments</h3>
+    {% endif %}
+    {% partial "comments/form" %}
+    <div class="comments">
+        <ul>
+            {% partial "comments/list" posts=posts %}
+        </ul>
+    </div>
+</div>

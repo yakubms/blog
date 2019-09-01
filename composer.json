@@ -41,8 +41,9 @@
         "laravel/framework": "5.5.*",
         "wikimedia/composer-merge-plugin": "dev-master",
         "rainlab/user-plugin": "^1.5",
-        "pkleindienst/blogsearch": "dev-master",
-        "sobored/rss": "dev-master",
+        "pkleindienst/oc-blogsearch-plugin": "dev-master",
+        "sobored/oc-rss-plugin": "dev-master",
+        "saurabhdhariwal/oc-comments-plugin": "dev-master",
         "rainlab/blog-plugin": "^1.3"
     },
     "require-dev":
@@ -108,7 +109,7 @@
         "type": "package",
         "package":
         {
-            "name": "sobored/rss",
+            "name": "sobored/oc-rss-plugin",
             "type": "october-plugin",
             "version": "dev-master",
             "source":
@@ -123,12 +124,27 @@
         "type": "package",
         "package":
         {
-            "name": "pkleindienst/blogsearch",
+            "name": "pkleindienst/oc-blogsearch-plugin",
             "type": "october-plugin",
             "version": "dev-master",
             "source":
             {
                 "url": "https://github.com/PascalKleindienst/october-blogsearch-extension",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    },
+    {
+        "type": "package",
+        "package":
+        {
+            "name": "saurabhdhariwal/oc-comments-plugin",
+            "type": "october-plugin",
+            "version": "dev-master",
+            "source":
+            {
+                "url": "https://github.com/yakubms/octobercms-plugin",
                 "type": "git",
                 "reference": "master"
             }

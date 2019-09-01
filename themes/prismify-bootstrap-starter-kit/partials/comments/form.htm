@@ -1,0 +1,34 @@
+<div id="wrap-comment-form">
+    <div class="row" id="comment-form">
+        <h2 class="comment-reply-title">コメントを残す
+            <small><a onclick="Comment.cancel()" style="display: none;" rel="nofollow" id="cancel-comment-reply-link" title="Cancel reply">×</a>
+            </small>
+        </h2>
+        <form>
+            <div id="comment_flash_message"></div>
+            {% if(user == false) %}
+            <!-- Name Field -->
+            <div class="form-group">
+                <input placeholder="名前" class="form-control" name="author" type="text">
+            </div>
+            <!-- Email Field -->
+            <div class="form-group">
+                <input placeholder="メールアドレス（任意）" class="form-control" name="email" type="text">
+            </div>
+            {% endif %}
+            <!-- Content Field -->
+            <div class="form-group">
+                <textarea placeholder="本文" class="form-control" id="comment-text" name="content" cols="50" rows="10"></textarea>
+            </div>
+            <input name="post_id" type="hidden" value="{{__SELF__.post_id}}">
+            {% if (__SELF__.settings.recaptcha_enabled) %}
+            <div class="g-recaptcha" data-sitekey="{{ __SELF__.settings.site_key }}"></div>
+            <br>
+            {% endif %}
+            <!-- Submit Field -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" onclick="Comment.saveButton(event)">送信</button>
+            </div>
+        </form>
+    </div>
+</div>
