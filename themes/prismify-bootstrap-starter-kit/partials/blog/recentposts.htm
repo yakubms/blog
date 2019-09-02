@@ -1,0 +1,22 @@
+==
+<?php
+use RainLab\Blog\Models\Post;
+
+function onEnd() {
+    $this['recentPosts'] = Post::where('published_at', '<', now())->orderBy('published_at', 'desc')->take(5)->get()->map(function ($el) {
+            return [
+            'date' => $el->published_at->toDateString(),
+            'slug' => $el->slug,
+            'title' => $el->title];
+        })->toArray();
+    $this['count'] = count($this['recentPosts']);
+}
+?>
+==
+{% if count > 1 %}
+<ul class="list-unstyled mt-2">
+    {% for post in recentPosts %}
+    <li><a class="page-link" href="/post/{{ post.slug }}">{{ post.date }} - {{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}

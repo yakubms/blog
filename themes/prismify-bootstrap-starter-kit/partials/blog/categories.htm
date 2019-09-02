@@ -1,5 +1,4 @@
 [viewBag]
-
 [blogCategories]
 slug = "{{ :slug }}"
 displayEmpty = 0
@@ -7,16 +6,13 @@ categoryPage = "blog/category"
 ==
 {% set categories = blogCategories.categories %}
 {% set currentCategorySlug = blogCategories.currentCategorySlug %}
-
 <div class="list-group">
     {% for category in categories %}
-        {% set postCount = category.post_count %}
-        <a href="{{ category.url }}"
-            class="list-group-item {{ category.slug == currentCategorySlug ? 'active' }}"
-            >{{ category.name }}
-            {% if postCount %}
-                <span class="badge">{{ postCount }}</span>
-            {% endif %}
-        </a>
+    {% set postCount = category.post_count %}
+    <a href="{{ category.url }}" class="page-link list-group-item {{ category.slug == currentCategorySlug ? 'active' }}">{{ category.name }}
+        {% if postCount %}
+        <span class="badge">{{ postCount }}</span>
+        {% endif %}
+    </a>
     {% endfor %}
 </div>

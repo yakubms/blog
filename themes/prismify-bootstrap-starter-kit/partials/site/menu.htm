@@ -3,16 +3,18 @@ resultPage = "blog/search"
 categoryFilter = 0
 ==
 <dl class="list-unstyled">
-    <dt class="mb-1">About</dt>
+    <dt class="mb-1">このサイトについて</dt>
     <dd>author: boundman</dd>
     <dd>Laravel, Vue.js, OctoberCMS等についての学習記録です。</dd>
     <dt>Todo</dt>
-    <dd>エントリの月別表示機能、コメント機能の作成、aboutページの作成などなど……。</dd>
-    <dt class="mb-1">Search</dt>
+    <dd>エントリの月別表示、aboutページの作成など……。</dd>
+    <dt class="mb-1">検索</dt>
     <dd class="mb-4">{% component 'searchForm' %}</dd>
-    <dt class="mb-1">Recent Comments</dt>
+    <dt class="mb-1">最近の投稿</dt>
+    <dd class="mb-4">{% partial 'blog/recentPosts' %}</dd>
+    <dt class="mb-1">最近のコメント</dt>
     <dd>{% partial 'blog/recentComments' %}</dd>
-    <dt class="mb-1">Categories</dt>
+    <dt class="mb-1">カテゴリ</dt>
     <dd>{% partial 'blog/categories' %}</dd>
     <dt class="mt-4">RSS</dt>
     <dd><a href="/rss.xml"><img src="{{ 'assets/images/rss.svg'|theme }}" width="32"></a></dd>

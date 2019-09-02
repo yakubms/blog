@@ -9,7 +9,7 @@ function onEnd() {
 }
 ?>
 ==
-{% if count > 1 %}
+{% if count > 0 %}
 <ul class="list-unstyled mt-2">
     {% for comment in recentComments %}
     <li><a class="page-link" href="/{{ comment.url }}#comment-{{ comment.id }}">{{ comment.date }} {{ comment.title }} from {{ comment.author }}</a></li>
