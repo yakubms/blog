@@ -15,14 +15,7 @@ function onEnd() {
 }
 ?>
 ==
-<div class="row">
-    <div class="col-md-10">
-        {% partial 'blog/nextandprev' hidden=true %}
-        {% partial 'blog/postbody' %}
-        {% partial 'blog/nextandprev' %}
-        {% partial 'comments/default' %}
-    </div>
-    <div class="col-md-2">
-        {% partial 'site/menu' %}
-    </div>
-</div>
+{% partial 'blog/nextandprev' hidden=true %}
+{% partial 'blog/postbody' %}
+{% partial 'blog/nextandprev' %}
+{% partial 'comments/default' %}

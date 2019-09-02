@@ -9,7 +9,8 @@ categoryPage = "blog/category"
 postPage = "blog/post"
 ==
 {% for post in posts %}
-{% partial 'blog/postbody' post=post %}
+{% partial 'blog/postbody' post=post commentlink=true
+%}
 {% else %}
 <div class="no-data">
     <p>{{ noPostsMessage }}</p>

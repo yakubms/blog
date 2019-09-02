@@ -53,7 +53,8 @@
         "phpunit/phpunit-selenium": "~1.2",
         "meyfa/phpunit-assert-gd": "1.1.0",
         "laravel/homestead": "^7.20",
-        "davidbadura/faker-markdown-generator": "^1.0"
+        "davidbadura/faker-markdown-generator": "^1.0",
+        "mavinoo/laravel-batch": "dev-master"
     },
     "autoload":
     {

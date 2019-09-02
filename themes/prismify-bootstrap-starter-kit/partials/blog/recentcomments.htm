@@ -1,0 +1,18 @@
+==
+<?php
+use SaurabhDhariwal\Comments\Models\Comments;
+
+function onEnd() {
+    $comment = new Comments();
+    $this['recentComments'] = $comment->getRecentComments(5);
+    $this['count'] = count($this['recentComments']);
+}
+?>
+==
+{% if count > 1 %}
+<ul class="list-unstyled mt-2">
+    {% for comment in recentComments %}
+    <li><a class="page-link" href="/{{ comment.url }}#comment-{{ comment.id }}">{{ comment.date }} {{ comment.title }} from {{ comment.author }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}

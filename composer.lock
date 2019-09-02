@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d81d5ea90efa298b688fcba32076ca0",
+    "content-hash": "e6d7ad3684a722f2823ec29ed7e7774f",
     "packages": [
         {
             "name": "composer/installers",
@@ -1704,16 +1704,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.2.3",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "e612609022e935f3d0337c1295176505b41188c8"
+                "reference": "97e59c7a16464196a8b9c77c47df68e4a39a45c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/e612609022e935f3d0337c1295176505b41188c8",
-                "reference": "e612609022e935f3d0337c1295176505b41188c8",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/97e59c7a16464196a8b9c77c47df68e4a39a45c4",
+                "reference": "97e59c7a16464196a8b9c77c47df68e4a39a45c4",
                 "shasum": ""
             },
             "require": {
@@ -1751,7 +1751,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-08-12T20:17:41+00:00"
+            "time": "2019-09-01T07:51:21+00:00"
         },
         {
             "name": "october/backend",
@@ -2547,7 +2547,7 @@
                 "reference": "master"
             },
             "type": "october-plugin",
-            "time": "2019-09-01T06:21:10+00:00"
+            "time": "2019-09-02T07:19:05+00:00"
         },
         {
             "name": "sobored/oc-rss-plugin",
@@ -4323,6 +4323,49 @@
             "time": "2018-12-11T02:04:35+00:00"
         },
         {
+            "name": "mavinoo/laravel-batch",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mavinoo/laravelBatch.git",
+                "reference": "e42eb9e29297b74d7b4ac598613889219b7ea6eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mavinoo/laravelBatch/zipball/e42eb9e29297b74d7b4ac598613889219b7ea6eb",
+                "reference": "e42eb9e29297b74d7b4ac598613889219b7ea6eb",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mavinoo\\LaravelBatch\\LaravelBatchServiceProvider"
+                    ],
+                    "aliases": {
+                        "Batch": "Mavinoo\\LaravelBatch\\LaravelBatchFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mavinoo\\LaravelBatch\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mohammad Ghanbari",
+                    "email": "wordpress.iran@gmail.com"
+                }
+            ],
+            "description": "Insert and update batch (bulk) in laravel",
+            "time": "2019-04-14T05:31:07+00:00"
+        },
+        {
             "name": "meyfa/phpunit-assert-gd",
             "version": "v1.1.0",
             "source": {
@@ -4950,8 +4993,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "The PHP Unit Testing framework.",
@@ -5648,7 +5691,8 @@
         "wikimedia/composer-merge-plugin": 20,
         "pkleindienst/oc-blogsearch-plugin": 20,
         "sobored/oc-rss-plugin": 20,
-        "saurabhdhariwal/oc-comments-plugin": 20
+        "saurabhdhariwal/oc-comments-plugin": 20,
+        "mavinoo/laravel-batch": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

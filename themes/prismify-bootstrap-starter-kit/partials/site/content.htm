@@ -20,12 +20,5 @@ sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
 ==
-<div class="row">
-    <div class="col-md-10">
-        {% partial 'blog/posts' %}
-        {% partial 'blog/paginator' %}
-    </div>
-    <div class="col-md-2">
-        {% partial 'site/menu' %}
-    </div>
-</div>
+{% partial 'blog/posts' %}
+{% partial 'blog/paginator' %}

@@ -74,7 +74,14 @@ description = "Default layout"
             </div>
         </div>
         <div class="container-fluid">
-            {% page %}
+            <div class="row">
+                <div class="col-md-9">
+                    {% page %}
+                </div>
+                <div class="col-md-3">
+                    {% partial 'site/menu' %}
+                </div>
+            </div>
         </div>
     </section>
     <small id="site-footer" class="site-footer">

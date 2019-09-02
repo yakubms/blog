@@ -26,12 +26,5 @@ function onEnd() {
 }
 ?>
 ==
-<div class="row">
-    <div class="col-md-10">
-        {% partial 'blog/posts' posts=posts %}
-        {% partial 'blog/paginator' %}
-    </div>
-    <div class="col-md-2">
-        {% partial 'site/menu' %}
-    </div>
-</div>
+{% partial 'blog/posts' posts=posts %}
+{% partial 'blog/paginator' %}

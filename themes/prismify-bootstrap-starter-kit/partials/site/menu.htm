@@ -10,8 +10,10 @@ categoryFilter = 0
     <dd>エントリの月別表示機能、コメント機能の作成、aboutページの作成などなど……。</dd>
     <dt class="mb-1">Search</dt>
     <dd class="mb-4">{% component 'searchForm' %}</dd>
+    <dt class="mb-1">Recent Comments</dt>
+    <dd>{% partial 'blog/recentComments' %}</dd>
     <dt class="mb-1">Categories</dt>
     <dd>{% partial 'blog/categories' %}</dd>
     <dt class="mt-4">RSS</dt>
-    <dd><a href="/rss.xml">RSS</a></dd>
+    <dd><a href="/rss.xml"><img src="{{ 'assets/images/rss.svg'|theme }}" width="32"></a></dd>
 </dl>

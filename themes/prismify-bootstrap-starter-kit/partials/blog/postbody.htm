@@ -1,9 +1,15 @@
 ==
+<?php
+function onEnd() {
+    $this['commentlink'] = $this['commentlink'] ? true : false;
+}
+?>
+==
 <div class="card mb-3">
     <div class="card-img-top">
         <a href="{{ post.url }}">
             {% if post.featured_images.count > 0 %}
-            <img class="media-object" src="{{ post.featured_images.first.getThumb(150, 'auto') }}" />
+            <img class="media-object" src="{{ post.featured_images.first.getThumb(150, 150) }}" />
             {% else %}
             <img class="media-object" src="https://7414.tk/storage/app/media/october.jpg" alt="placeholder" width="150" height="150" />
             {% endif %}
@@ -28,6 +34,9 @@
                 {% else %}
                 <div class="card-text">
                     {{ post.content_html | raw}}
+                    {% if commentlink %}
+                    <p class="mt-3"><a class="btn btn-success" href="/post/{{ post.slug }}#wrap-comment-form">コメントを書く</a></p>
+                    {% endif %}
                 </div>
                 {% endif %}
     </div>
