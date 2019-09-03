@@ -1,4 +1,4 @@
-title = "カテゴリ"
+title = "カテゴリ："
 url = "/category/:slug/:page?"
 layout = "default"
 is_hidden = 0
@@ -14,6 +14,15 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
+==
+function onEnd()
+{
+if ($this->category) {
+$this->page->title .= $this->category->name;
+$this->page->title .= $this->posts->total() ?
+'（' . $this->posts->currentPage() . '/' . $this->posts->lastPage() . 'ページ）' : '';
+}
+}
 ==
 {% partial 'blog/posts' %}
 {% partial 'blog/paginator' %}

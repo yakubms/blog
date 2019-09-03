@@ -9,7 +9,7 @@ categoryPage = "blog/category"
 <div class="list-group">
     {% for category in categories %}
     {% set postCount = category.post_count %}
-    <a href="{{ category.url }}" class="page-link list-group-item {{ category.slug == currentCategorySlug ? 'active' }}">{{ category.name }}
+    <a href="{{ category.url }}" class="list-group-item {{ category.slug == currentCategorySlug ? 'active' }}">{{ category.name }}
         {% if postCount %}
         <span class="badge">{{ postCount }}</span>
         {% endif %}

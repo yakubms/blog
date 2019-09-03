@@ -10,9 +10,9 @@ function onEnd() {
 ?>
 ==
 {% if count > 0 %}
-<ul class="list-unstyled mt-2">
+<ul class="list-group list-unstyled mt-2">
     {% for comment in recentComments %}
-    <li><a class="page-link" href="/{{ comment.url }}#comment-{{ comment.id }}">{{ comment.date }} {{ comment.title }} from {{ comment.author }}</a></li>
+    <li><a class="list-group-item" href="/{{ comment.url }}#comment-{{ comment.id }}">{{ comment.date }} {{ comment.title }} from {{ comment.author }}</a></li>
     {% endfor %}
 </ul>
 {% endif %}

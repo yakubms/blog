@@ -13,7 +13,7 @@
     <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): 1 }) }}">&lt;&lt;</a></li>
     {% endif %}
     {% set start = posts.currentPage > 3 ? posts.currentPage - 3 : 1 %}
-    {% set end = posts.currentPage < posts.lastPage - 1 ? posts.currentPage + 3 : posts.lastPage %} {% for page in start..end %} <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
+    {% set end = posts.currentPage < posts.lastPage - 3 ? posts.currentPage + 3 : posts.lastPage %} {% for page in start..end %} <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
         <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
         </li>
         {% endfor %}

@@ -1,0 +1,24 @@
+==
+<?php
+use RainLab\Blog\Models\Post;
+
+function onEnd() {
+    $this['currentYear'] = $this->param('year');
+    $this['currentMonth'] = $this->param('month');
+
+    $this['archives'] = Post::select(DB::raw('count(id) as `count`'), DB::raw("DATE_FORMAT(published_at, '%Y-%m') yearmonth"),  DB::raw('YEAR(published_at) year, MONTH(published_at) month'))->where('published_at', '<', now())->groupby('year', 'month')->orderBy('yearmonth', 'desc')->pluck('count', 'yearmonth')->toArray();
+    $this['count'] = count($this->archives);
+}
+?>
+==
+{% if count > 1 %}
+<ul class="list-unstyled list-group mt-2">
+    {% for yearmonth, entries in archives %}
+    {% set isActive = '' %}
+    {% if yearmonth == currentYear~'-'~currentMonth %}
+    {% set isActive = ' active' %}
+    {% endif %}
+    <li><a class="list-group-item{{isActive}}" href="/archive/{{ yearmonth|replace({'-': "/"})}}">{{ yearmonth|replace({'-': "年"}) }}月 ({{ entries }})</a></li>
+    {% endfor %}
+</ul>
+{% endif %}

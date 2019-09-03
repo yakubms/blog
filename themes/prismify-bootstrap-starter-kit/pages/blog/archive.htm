@@ -1,0 +1,30 @@
+title = "Archive"
+url = "/archive/:year/:month/:page?"
+layout = "default"
+is_hidden = 0
+[blogPosts]
+==
+<?php
+use RainLab\Blog\Models\Post;
+use Illuminate\Pagination\LengthAwarePaginator;
+
+function onEnd() {
+    LengthAwarePaginator::currentPageResolver(function () {
+        return $this->param('page');
+    });
+    $this['posts'] = Post::where('published_at', '<', now())
+        ->whereYear('published_at', $this->param('year'))
+        ->whereMonth('published_at', $this->param('month'))
+        ->orderBy('published_at', 'desc')
+        ->paginate(5);
+
+    if ($this->posts) {
+    $this->page->title = $this->param('year') .'年'. $this->param('month') . '月の記事';
+    $this->page->title .= $this->posts->total() ?
+    '（' . $this->posts->currentPage() . '/' . $this->posts->lastPage() . 'ページ）' : '';
+    }
+}
+?>
+==
+{% partial 'blog/posts' posts=posts %}
+{% partial 'blog/paginator' %}
