@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6d7ad3684a722f2823ec29ed7e7774f",
+    "content-hash": "8ce272ec28a411c53577365fd76ce5c1",
     "packages": [
         {
             "name": "composer/installers",
@@ -882,6 +882,17 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "janvince/oc-smallcontactform-plugin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jan-vince/smallcontactform",
+                "reference": "master"
+            },
+            "type": "october-plugin",
+            "time": "2019-03-30T06:44:36+00:00"
         },
         {
             "name": "jenssegers/date",
@@ -5692,6 +5703,7 @@
         "pkleindienst/oc-blogsearch-plugin": 20,
         "sobored/oc-rss-plugin": 20,
         "saurabhdhariwal/oc-comments-plugin": 20,
+        "janvince/oc-smallcontactform-plugin": 20,
         "mavinoo/laravel-batch": 20
     },
     "prefer-stable": true,

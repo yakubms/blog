@@ -1,22 +1,23 @@
 description = "Site Header"
-
 [viewBag]
 ==
 <!-- Header -->
-        <header id="layout-header">
-
-            <!-- Nav -->
-            <nav id="layout-nav" class="navbar navbar-fixed-top navbar-dark bg-primary" role="navigation">
-                <div class="container">
-                        <ul class="nav navbar-nav">
-                            <li class="{% if this.page.id == 'blog' %}active{% else %}inactive{% endif %}"><a href="/" class="text-light">Home</a></li>
-
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            {% if user %}
-                                <li><a href="#" data-request="onLogout">Logout</a></li>
-                            {% endif %}
-                        </ul>
-                    </div>
-            </nav>
-        </header>
+<header id="layout-header">
+    <!-- Nav -->
+    <nav id="layout-nav" class="navbar-expand-lg navbar navbar-fixed-top navbar-dark bg-primary" role="navigation">
+        <div class="container collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item {% if this.page.id == 'blog' %}active{% else %}inactive{% endif %}"><a class="nav-link text-light" href="/">ホーム</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/post/about">当サイトについて</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/post/link">リンク</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/post/law">プライバシーポリシー</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/contact">お問い合わせ</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user %}
+                <li><a href="#" data-request="onLogout">Logout</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+</header>

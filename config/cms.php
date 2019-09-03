@@ -36,7 +36,7 @@ return [
     |
     */
 
-    'backendUri' => 'backend',
+    'backendUri' => env('BACKEND_URL', 'backend'),
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'backendTimezone' => 'Asia/Tokyo',
+    'backendTimezone' => env('APP_TIMEZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------
