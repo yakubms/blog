@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ce272ec28a411c53577365fd76ce5c1",
+    "content-hash": "4332bb755de2d340fb64e1aba8a43dae",
     "packages": [
         {
             "name": "composer/installers",
@@ -2039,6 +2039,17 @@
                 "system"
             ],
             "time": "2019-08-09T08:07:32+00:00"
+        },
+        {
+            "name": "ompmega/oc-mixhelper-plugin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ompmega/oc-mix-helper-plugin",
+                "reference": "master"
+            },
+            "type": "october-plugin",
+            "time": "2019-02-01T03:47:27+00:00"
         },
         {
             "name": "oyejorge/less.php",
@@ -5704,6 +5715,7 @@
         "sobored/oc-rss-plugin": 20,
         "saurabhdhariwal/oc-comments-plugin": 20,
         "janvince/oc-smallcontactform-plugin": 20,
+        "ompmega/oc-mixhelper-plugin": 20,
         "mavinoo/laravel-batch": 20
     },
     "prefer-stable": true,

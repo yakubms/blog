@@ -1,0 +1,49 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{% if this.page.description %}{{ this.page.description }}{% else %}{{ this.theme.meta_description }}{% endif %}">
+    <meta name="keywords" content="{% if this.page.keywords %}{{ this.page.keywords }}{% else %}{{ this.theme.meta_keywords }}{% endif %}">
+    <meta name="title" content="{% if this.page.title %}{{ this.page.title }}{% else %}{{ this.theme.meta_title }}{% endif %}">
+    <meta name="author" content="{{ this.theme.website_author }}">
+    <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}">
+    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" property="stylesheet" href="/modules/system/assets/css/framework.extras-min.css">
+    {% styles %}
+    <title>{% if this.page.title %}{{ this.page.title }}{% else %}{{ this.theme.meta_title }}{% endif %} - {{ this.theme.website_name }}</title>
+</head>
+
+<body class="layout-{{ this.layout.id }} page-{{ this.page.id }}">
+    {% partial 'site/header' %}
+    <!-- Content -->
+    <section id="layout-content">
+        <div class="jumbotron jumbotron-fluid bg-light">
+            <div class="container">
+                <h1>{{ this.page.title }}</h1>
+                <p>{{ this.page.description }}</p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    {% page %}
+                </div>
+                <div class="col-md-3">
+                    {% partial 'site/menu' %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="site-footer" class="site-footer">
+        {% partial 'site/footer' %}
+    </div>
+    <script src="{{ mix('/js/app.js') }}"></script>
+    <script src="/modules/system/assets/js/framework.combined-min.js"></script>
+    {% scripts %}
+</body>
+
+</html>

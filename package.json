@@ -1,26 +1,44 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "description": "<p align=\"center\">     <img src=\"https://github.com/octobercms/october/blob/master/themes/demo/assets/images/october.png?raw=true\" alt=\"October\" width=\"25%\" height=\"25%\" /> </p>",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "laravel-mix": "^4.0.16"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yakubms/blog.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yakubms/blog/issues"
-  },
-  "homepage": "https://github.com/yakubms/blog#readme"
+    "name": "blog",
+    "version": "1.0.0",
+    "description": "<p align=\"center\">     <img src=\"https://github.com/octobercms/october/blob/master/themes/demo/assets/images/october.png?raw=true\" alt=\"October\" width=\"25%\" height=\"25%\" /> </p>",
+    "main": "index.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "dev": "npm run development",
+        "development": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "highlight.js": "^9.15.10",
+        "jquery": "^3.4.1",
+        "npm-font-open-sans": "^1.1.0",
+        "popper.js": "^1.15.0"
+    },
+    "devDependencies": {
+        "cross-env": "^5.1",
+        "laravel-mix": "^4.0.7",
+        "lodash": "^4.17.13",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yakubms/blog.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yakubms/blog/issues"
+    },
+    "homepage": "https://github.com/yakubms/blog#readme"
 }

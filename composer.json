@@ -45,7 +45,8 @@
         "sobored/oc-rss-plugin": "dev-master",
         "saurabhdhariwal/oc-comments-plugin": "dev-master",
         "rainlab/blog-plugin": "^1.3",
-        "janvince/oc-smallcontactform-plugin": "dev-master"
+        "janvince/oc-smallcontactform-plugin": "dev-master",
+        "ompmega/oc-mixhelper-plugin": "dev-master"
     },
     "require-dev":
     {
@@ -162,6 +163,21 @@
             "source":
             {
                 "url": "https://github.com/jan-vince/smallcontactform",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    },
+    {
+        "type": "package",
+        "package":
+        {
+            "name": "ompmega/oc-mixhelper-plugin",
+            "type": "october-plugin",
+            "version": "dev-master",
+            "source":
+            {
+                "url": "https://github.com/ompmega/oc-mix-helper-plugin",
                 "type": "git",
                 "reference": "master"
             }
