@@ -15,6 +15,24 @@ description = "Default layout"
     <link rel="stylesheet" property="stylesheet" href="/modules/system/assets/css/framework.extras-min.css">
     {% styles %}
     <title>{% if this.page.title %}{{ this.page.title }}{% else %}{{ this.theme.meta_title }}{% endif %} - {{ this.theme.website_name }}</title>
+    <style>
+    a.btn-social {
+        padding: 5px;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    img.btn-social {
+        width: 28px;
+        height: 28px;
+    }
+
+    a.btn-social:hover {
+        opacity: 0.5;
+    }
+
+    </style>
 </head>
 
 <body class="layout-{{ this.layout.id }} page-{{ this.page.id }}">
@@ -33,7 +51,7 @@ description = "Default layout"
                     {% page %}
                 </div>
                 <div class="col-md-3">
-                    {% partial 'site/menu' %}
+                    {% partial 'menu/menu' %}
                 </div>
             </div>
         </div>
