@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4332bb755de2d340fb64e1aba8a43dae",
+    "content-hash": "47a712c493df4fba4564f5319eefb904",
     "packages": [
         {
             "name": "composer/installers",
@@ -2576,11 +2576,11 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jbh/oc-blog-rss-plugin",
+                "url": "https://github.com/yakubms/oc-blog-rss-plugin",
                 "reference": "master"
             },
             "type": "october-plugin",
-            "time": "2017-10-07T19:34:42+00:00"
+            "time": "2019-09-05T01:50:32+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5712,10 +5712,10 @@
     "stability-flags": {
         "wikimedia/composer-merge-plugin": 20,
         "pkleindienst/oc-blogsearch-plugin": 20,
-        "sobored/oc-rss-plugin": 20,
         "saurabhdhariwal/oc-comments-plugin": 20,
         "janvince/oc-smallcontactform-plugin": 20,
         "ompmega/oc-mixhelper-plugin": 20,
+        "sobored/oc-rss-plugin": 20,
         "mavinoo/laravel-batch": 20
     },
     "prefer-stable": true,

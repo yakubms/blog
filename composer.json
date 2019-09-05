@@ -42,11 +42,11 @@
         "wikimedia/composer-merge-plugin": "dev-master",
         "rainlab/user-plugin": "^1.5",
         "pkleindienst/oc-blogsearch-plugin": "dev-master",
-        "sobored/oc-rss-plugin": "dev-master",
         "saurabhdhariwal/oc-comments-plugin": "dev-master",
         "rainlab/blog-plugin": "^1.3",
         "janvince/oc-smallcontactform-plugin": "dev-master",
-        "ompmega/oc-mixhelper-plugin": "dev-master"
+        "ompmega/oc-mixhelper-plugin": "dev-master",
+        "sobored/oc-rss-plugin": "dev-master"
     },
     "require-dev":
     {
@@ -117,7 +117,7 @@
             "version": "dev-master",
             "source":
             {
-                "url": "https://github.com/jbh/oc-blog-rss-plugin",
+                "url": "https://github.com/yakubms/oc-blog-rss-plugin",
                 "type": "git",
                 "reference": "master"
             }
