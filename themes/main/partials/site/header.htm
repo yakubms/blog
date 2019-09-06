@@ -18,17 +18,20 @@ function onStart() {
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="Navber">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item {% if this.page.id == 'blog' %}active{% else %}inactive{% endif %}"><a class="nav-link text-light" href="/">ホーム</a></li>
                 <li class="nav-item  d-md-none"><a class="nav-link text-light" href="#site-menu">メニュー</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/post/about">当サイトについて</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/post/link">リンク</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/post/law">プライバシーポリシー</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/contact">お問い合わせ</a></li>
-                {% if user %}
-                <li class="nav-item"><a class="nav-link text-light" href="/{{ backend }}/backend/auth/signout">ログアウト</a></li>
-                {% endif %}
             </ul>
+                {% if user %}
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a class="nav-link text-light" href="/{{ backend }}">ダッシュボード</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/{{ backend }}/backend/auth/signout">ログアウト</a></li>
+            </ul>
+                {% endif %}
         </div>
     </nav>
 </header>
