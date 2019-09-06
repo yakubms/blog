@@ -22,6 +22,24 @@ a.list-group-item {
     }
 }
 
+
+a.btn-social {
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+img.btn-social {
+    width: 28px;
+    height: 28px;
+}
+
+a.btn-social:hover {
+    opacity: 0.5;
+}
+
+
 pre {
     white-space: pre-wrap;
     word-wrap: break-word;

@@ -1,5 +1,10 @@
 ==
 <?php
+function onStart() {
+    $this['user'] = BackendAuth::getUser();
+    $this['backend'] = config('cms.backendUri');
+}
+
 function onEnd() {
     $this['commentlink'] = $this['commentlink'] ? true : false;
 }
@@ -20,6 +25,9 @@ function onEnd() {
             <a href="{{ post.url }}">{{ post.title }}</a>
         </h2>
         <ul class="card-text list-unstyled">
+            {% if user %}
+            <li class="my-1"><a href="/{{ backend }}/rainlab/blog/posts/update/{{ post.id }}">編集する</a></li>
+            {% endif %}
             <li>カテゴリ
                 {% if post.categories.count %} {% endif %}
                 {% for category in post.categories %}

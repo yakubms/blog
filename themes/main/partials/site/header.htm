@@ -1,21 +1,32 @@
 description = "Site Header"
+
 [viewBag]
+==
+<?php
+function onStart() {
+    $this['user'] = BackendAuth::getUser();
+    $this['backend'] = config('cms.backendUri');
+}
+?>
 ==
 <!-- Header -->
 <header id="layout-header">
     <!-- Nav -->
-    <nav id="layout-nav" class="navbar-expand-lg navbar navbar-fixed-top navbar-dark bg-primary" role="navigation">
-        <div class="container collapse navbar-collapse">
+    <nav id="layout-nav" class="navbar navbar-expand-lg navbar-dark bg-primary" role="navigation">
+        <a class="navbar-brand d-md-none" href="#">メニュー</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Navber">
             <ul class="nav navbar-nav">
                 <li class="nav-item {% if this.page.id == 'blog' %}active{% else %}inactive{% endif %}"><a class="nav-link text-light" href="/">ホーム</a></li>
+                <li class="nav-item  d-md-none"><a class="nav-link text-light" href="#site-menu">メニュー</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/post/about">当サイトについて</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/post/link">リンク</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/post/law">プライバシーポリシー</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/contact">お問い合わせ</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
                 {% if user %}
-                <li><a href="#" data-request="onLogout">Logout</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/{{ backend }}/backend/auth/signout">ログアウト</a></li>
                 {% endif %}
             </ul>
         </div>
