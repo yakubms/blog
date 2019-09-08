@@ -46,7 +46,9 @@
         "rainlab/blog-plugin": "^1.3",
         "janvince/oc-smallcontactform-plugin": "dev-master",
         "ompmega/oc-mixhelper-plugin": "dev-master",
-        "sobored/oc-rss-plugin": "dev-master"
+        "sobored/oc-rss-plugin": "dev-master",
+        "rainlab/sitemap-plugin": "^1.0",
+        "rainlab/googleanalytics": "^1.2"
     },
     "require-dev":
     {
