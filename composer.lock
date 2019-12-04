@@ -1274,7 +1274,7 @@
                 "reference": "master"
             },
             "type": "october-plugin",
-            "time": "2019-03-30T06:44:36+00:00"
+            "time": "2019-11-30T15:24:17+00:00"
         },
         {
             "name": "jenssegers/date",
@@ -1885,18 +1885,18 @@
             "authors": [
                 {
                     "name": "Joost Faassen",
-                    "role": "Packaging for Composer",
-                    "email": "j.faassen@linkorb.com"
+                    "email": "j.faassen@linkorb.com",
+                    "role": "Packaging for Composer"
                 },
                 {
                     "name": "Ryan Grove",
-                    "role": "PHP port",
-                    "email": "ryan@wonko.com"
+                    "email": "ryan@wonko.com",
+                    "role": "PHP port"
                 },
                 {
                     "name": "Adam Gofort",
-                    "role": "Updates to the PHP port",
-                    "email": "aag@adamgoforth.com"
+                    "email": "aag@adamgoforth.com",
+                    "role": "Updates to the PHP port"
                 },
                 {
                     "name": "Douglas Crockford",
@@ -2191,9 +2191,9 @@
                 },
                 {
                     "name": "Luke Towers",
-                    "role": "Maintainer",
                     "email": "octobercms@luketowers.ca",
-                    "homepage": "https://luketowers.ca"
+                    "homepage": "https://luketowers.ca",
+                    "role": "Maintainer"
                 }
             ],
             "description": "Backend module for October CMS",
@@ -2211,12 +2211,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/octoberrain/cms.git",
-                "reference": "8901c384c1b393679e43baad46c58c6d95ee5e09"
+                "reference": "7025a1818dfbaa468faba6fda8693371ce9fab91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/octoberrain/cms/zipball/8901c384c1b393679e43baad46c58c6d95ee5e09",
-                "reference": "8901c384c1b393679e43baad46c58c6d95ee5e09",
+                "url": "https://api.github.com/repos/octoberrain/cms/zipball/7025a1818dfbaa468faba6fda8693371ce9fab91",
+                "reference": "7025a1818dfbaa468faba6fda8693371ce9fab91",
                 "shasum": ""
             },
             "require": {
@@ -2250,9 +2250,9 @@
                 },
                 {
                     "name": "Luke Towers",
-                    "role": "Maintainer",
                     "email": "octobercms@luketowers.ca",
-                    "homepage": "https://luketowers.ca"
+                    "homepage": "https://luketowers.ca",
+                    "role": "Maintainer"
                 }
             ],
             "description": "CMS module for October CMS",
@@ -2369,12 +2369,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/octoberrain/system.git",
-                "reference": "afbd508dee0b7f442a8d19ad5b26a3e6321d86a5"
+                "reference": "942e17899edec16a2e51db536b574c7ea1929e57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/octoberrain/system/zipball/afbd508dee0b7f442a8d19ad5b26a3e6321d86a5",
-                "reference": "afbd508dee0b7f442a8d19ad5b26a3e6321d86a5",
+                "url": "https://api.github.com/repos/octoberrain/system/zipball/942e17899edec16a2e51db536b574c7ea1929e57",
+                "reference": "942e17899edec16a2e51db536b574c7ea1929e57",
                 "shasum": ""
             },
             "require": {
@@ -2408,9 +2408,9 @@
                 },
                 {
                     "name": "Luke Towers",
-                    "role": "Maintainer",
                     "email": "octobercms@luketowers.ca",
-                    "homepage": "https://luketowers.ca"
+                    "homepage": "https://luketowers.ca",
+                    "role": "Maintainer"
                 }
             ],
             "description": "System module for October CMS",
@@ -2431,7 +2431,7 @@
                 "reference": "master"
             },
             "type": "october-plugin",
-            "time": "2019-02-01T03:47:27+00:00"
+            "time": "2019-09-24T01:48:40+00:00"
         },
         {
             "name": "oyejorge/less.php",
@@ -2983,13 +2983,13 @@
             "authors": [
                 {
                     "name": "Alexey Bobkov",
-                    "role": "Co-founder",
-                    "email": "aleksey.bobkov@gmail.com"
+                    "email": "aleksey.bobkov@gmail.com",
+                    "role": "Co-founder"
                 },
                 {
                     "name": "Samuel Georges",
-                    "role": "Co-founder",
-                    "email": "daftspunky@gmail.com"
+                    "email": "daftspunky@gmail.com",
+                    "role": "Co-founder"
                 }
             ],
             "description": "Blog plugin for October CMS",
@@ -3069,13 +3069,13 @@
             "authors": [
                 {
                     "name": "Alexey Bobkov",
-                    "role": "Co-founder",
-                    "email": "aleksey.bobkov@gmail.com"
+                    "email": "aleksey.bobkov@gmail.com",
+                    "role": "Co-founder"
                 },
                 {
                     "name": "Samuel Georges",
-                    "role": "Co-founder",
-                    "email": "daftspunky@gmail.com"
+                    "email": "daftspunky@gmail.com",
+                    "role": "Co-founder"
                 }
             ],
             "description": "Sitemap plugin for October CMS",
@@ -3700,16 +3700,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.4.31",
+            "version": "v3.4.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "b3d57a1c325f39f703b249bed7998ce8c64236b4"
+                "reference": "d2d0cfe8e319d9df44c4cca570710fcf221d4593"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b3d57a1c325f39f703b249bed7998ce8c64236b4",
-                "reference": "b3d57a1c325f39f703b249bed7998ce8c64236b4",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/d2d0cfe8e319d9df44c4cca570710fcf221d4593",
+                "reference": "d2d0cfe8e319d9df44c4cca570710fcf221d4593",
                 "shasum": ""
             },
             "require": {
@@ -3750,7 +3750,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-26T07:50:50+00:00"
+            "time": "2019-11-28T12:52:59+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -4022,16 +4022,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.12.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17"
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/b42a2f66e8f1b15ccf25652c3424265923eb4f17",
-                "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7b4aab9743c30be783b73de055d24a39cf4b954f",
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f",
                 "shasum": ""
             },
             "require": {
@@ -4043,7 +4043,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.12-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -4077,20 +4077,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-08-06T08:03:45+00:00"
+            "time": "2019-11-27T14:18:11+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
-            "version": "v1.12.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "54b4c428a0054e254223797d2713c31e08610831"
+                "reference": "af23c7bb26a73b850840823662dda371484926c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/54b4c428a0054e254223797d2713c31e08610831",
-                "reference": "54b4c428a0054e254223797d2713c31e08610831",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/af23c7bb26a73b850840823662dda371484926c4",
+                "reference": "af23c7bb26a73b850840823662dda371484926c4",
                 "shasum": ""
             },
             "require": {
@@ -4100,7 +4100,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.12-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -4136,7 +4136,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-08-06T08:03:45+00:00"
+            "time": "2019-11-27T13:56:44+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -4618,8 +4618,8 @@
             "authors": [
                 {
                     "name": "Tijs Verkoyen",
-                    "role": "Developer",
-                    "email": "css_to_inline_styles@verkoyen.eu"
+                    "email": "css_to_inline_styles@verkoyen.eu",
+                    "role": "Developer"
                 }
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
@@ -4671,19 +4671,19 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "role": "Lead Developer",
                     "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org"
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Armin Ronacher",
-                    "role": "Project Founder",
-                    "email": "armin.ronacher@active-4.com"
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
                 },
                 {
                     "name": "Twig Team",
-                    "role": "Contributors",
-                    "homepage": "https://twig.symfony.com/contributors"
+                    "homepage": "https://twig.symfony.com/contributors",
+                    "role": "Contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -5046,12 +5046,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mavinoo/laravelBatch.git",
-                "reference": "e42eb9e29297b74d7b4ac598613889219b7ea6eb"
+                "reference": "a46e0ac1c15f61987379c812018dfec8c9f98e72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mavinoo/laravelBatch/zipball/e42eb9e29297b74d7b4ac598613889219b7ea6eb",
-                "reference": "e42eb9e29297b74d7b4ac598613889219b7ea6eb",
+                "url": "https://api.github.com/repos/mavinoo/laravelBatch/zipball/a46e0ac1c15f61987379c812018dfec8c9f98e72",
+                "reference": "a46e0ac1c15f61987379c812018dfec8c9f98e72",
                 "shasum": ""
             },
             "type": "library",
@@ -5068,7 +5068,10 @@
             "autoload": {
                 "psr-4": {
                     "Mavinoo\\LaravelBatch\\": "src/"
-                }
+                },
+                "files": [
+                    "src/Common/Helpers.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5081,7 +5084,7 @@
                 }
             ],
             "description": "Insert and update batch (bulk) in laravel",
-            "time": "2019-04-14T05:31:07+00:00"
+            "time": "2019-11-04T20:09:21+00:00"
         },
         {
             "name": "meyfa/phpunit-assert-gd",
@@ -5491,8 +5494,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sb@sebastian-bergmann.de"
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
                 }
             ],
             "description": "FilterIterator implementation that filters files based on a list of suffixes.",
@@ -5533,8 +5536,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "Simple template engine.",
@@ -5582,8 +5585,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sb@sebastian-bergmann.de"
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
                 }
             ],
             "description": "Utility class for timing",
@@ -5821,13 +5824,13 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sb@sebastian-bergmann.de"
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
                 },
                 {
                     "name": "Giorgio Sironi",
-                    "role": "developer",
-                    "email": "info@giorgiosironi.com"
+                    "email": "info@giorgiosironi.com",
+                    "role": "developer"
                 }
             ],
             "description": "Selenium Server integration for PHPUnit",
@@ -6344,8 +6347,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
