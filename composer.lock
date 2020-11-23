@@ -8,28 +8,31 @@
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.7.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "141b272484481432cda342727a427dc1e206bfa0"
+                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/141b272484481432cda342727a427dc1e206bfa0",
-                "reference": "141b272484481432cda342727a427dc1e206bfa0",
+                "url": "https://api.github.com/repos/composer/installers/zipball/b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
+                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0 || ^2.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
                 "shama/baton": "*"
             },
             "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "^4.8.36"
+                "composer/composer": "1.6.* || 2.0.*@dev",
+                "composer/semver": "1.0.* || 2.0.*@dev",
+                "phpunit/phpunit": "^4.8.36",
+                "sebastian/comparator": "^1.2.4",
+                "symfony/process": "^2.3"
             },
             "type": "composer-plugin",
             "extra": {
@@ -65,6 +68,7 @@
                 "Kanboard",
                 "Lan Management System",
                 "MODX Evo",
+                "MantisBT",
                 "Mautic",
                 "Maya",
                 "OXID",
@@ -119,6 +123,7 @@
                 "shopware",
                 "silverstripe",
                 "sydes",
+                "sylius",
                 "symfony",
                 "typo3",
                 "wordpress",
@@ -126,7 +131,17 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2019-08-12T15:00:31+00:00"
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-07T06:57:05+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1217,6 +1232,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -1263,6 +1279,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -1274,7 +1291,7 @@
                 "reference": "master"
             },
             "type": "october-plugin",
-            "time": "2019-03-30T06:44:36+00:00"
+            "time": "2020-10-15T07:11:52+00:00"
         },
         {
             "name": "jenssegers/date",
@@ -1712,6 +1729,7 @@
                 "scss",
                 "stylesheet"
             ],
+            "abandoned": "scssphp/scssphp",
             "time": "2019-06-18T21:15:44+00:00"
         },
         {
@@ -1885,18 +1903,18 @@
             "authors": [
                 {
                     "name": "Joost Faassen",
-                    "role": "Packaging for Composer",
-                    "email": "j.faassen@linkorb.com"
+                    "email": "j.faassen@linkorb.com",
+                    "role": "Packaging for Composer"
                 },
                 {
                     "name": "Ryan Grove",
-                    "role": "PHP port",
-                    "email": "ryan@wonko.com"
+                    "email": "ryan@wonko.com",
+                    "role": "PHP port"
                 },
                 {
                     "name": "Adam Gofort",
-                    "role": "Updates to the PHP port",
-                    "email": "aag@adamgoforth.com"
+                    "email": "aag@adamgoforth.com",
+                    "role": "Updates to the PHP port"
                 },
                 {
                     "name": "Douglas Crockford",
@@ -2032,6 +2050,7 @@
                 "cron",
                 "schedule"
             ],
+            "abandoned": "dragonmantank/cron-expression",
             "time": "2017-01-23T04:29:33+00:00"
         },
         {
@@ -2148,16 +2167,16 @@
         },
         {
             "name": "october/backend",
-            "version": "v1.0.458",
+            "version": "v1.0.468",
             "source": {
                 "type": "git",
                 "url": "https://github.com/octoberrain/backend.git",
-                "reference": "ced03f89cfbaed5f2df19ee4120ecdd90167da5b"
+                "reference": "051207231d4ac502aee5e50c199c16587a8aecc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/octoberrain/backend/zipball/ced03f89cfbaed5f2df19ee4120ecdd90167da5b",
-                "reference": "ced03f89cfbaed5f2df19ee4120ecdd90167da5b",
+                "url": "https://api.github.com/repos/octoberrain/backend/zipball/051207231d4ac502aee5e50c199c16587a8aecc8",
+                "reference": "051207231d4ac502aee5e50c199c16587a8aecc8",
                 "shasum": ""
             },
             "require": {
@@ -2191,9 +2210,9 @@
                 },
                 {
                     "name": "Luke Towers",
-                    "role": "Maintainer",
                     "email": "octobercms@luketowers.ca",
-                    "homepage": "https://luketowers.ca"
+                    "homepage": "https://luketowers.ca",
+                    "role": "Maintainer"
                 }
             ],
             "description": "Backend module for October CMS",
@@ -2203,7 +2222,7 @@
                 "october",
                 "october cms"
             ],
-            "time": "2019-08-10T15:28:01+00:00"
+            "time": "2020-07-19T07:01:09+00:00"
         },
         {
             "name": "october/cms",
@@ -2250,9 +2269,9 @@
                 },
                 {
                     "name": "Luke Towers",
-                    "role": "Maintainer",
                     "email": "octobercms@luketowers.ca",
-                    "homepage": "https://luketowers.ca"
+                    "homepage": "https://luketowers.ca",
+                    "role": "Maintainer"
                 }
             ],
             "description": "CMS module for October CMS",
@@ -2408,9 +2427,9 @@
                 },
                 {
                     "name": "Luke Towers",
-                    "role": "Maintainer",
                     "email": "octobercms@luketowers.ca",
-                    "homepage": "https://luketowers.ca"
+                    "homepage": "https://luketowers.ca",
+                    "role": "Maintainer"
                 }
             ],
             "description": "System module for October CMS",
@@ -2431,7 +2450,7 @@
                 "reference": "master"
             },
             "type": "october-plugin",
-            "time": "2019-02-01T03:47:27+00:00"
+            "time": "2020-11-23T19:19:59+00:00"
         },
         {
             "name": "oyejorge/less.php",
@@ -2493,6 +2512,7 @@
                 "php",
                 "stylesheet"
             ],
+            "abandoned": true,
             "time": "2017-03-28T22:19:25+00:00"
         },
         {
@@ -2983,13 +3003,13 @@
             "authors": [
                 {
                     "name": "Alexey Bobkov",
-                    "role": "Co-founder",
-                    "email": "aleksey.bobkov@gmail.com"
+                    "email": "aleksey.bobkov@gmail.com",
+                    "role": "Co-founder"
                 },
                 {
                     "name": "Samuel Georges",
-                    "role": "Co-founder",
-                    "email": "daftspunky@gmail.com"
+                    "email": "daftspunky@gmail.com",
+                    "role": "Co-founder"
                 }
             ],
             "description": "Blog plugin for October CMS",
@@ -3069,13 +3089,13 @@
             "authors": [
                 {
                     "name": "Alexey Bobkov",
-                    "role": "Co-founder",
-                    "email": "aleksey.bobkov@gmail.com"
+                    "email": "aleksey.bobkov@gmail.com",
+                    "role": "Co-founder"
                 },
                 {
                     "name": "Samuel Georges",
-                    "role": "Co-founder",
-                    "email": "daftspunky@gmail.com"
+                    "email": "daftspunky@gmail.com",
+                    "role": "Co-founder"
                 }
             ],
             "description": "Sitemap plugin for October CMS",
@@ -3234,17 +3254,17 @@
             ],
             "authors": [
                 {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com",
+                    "homepage": "https://benramsey.com"
+                },
+                {
                     "name": "Marijn Huizendveld",
                     "email": "marijn.huizendveld@gmail.com"
                 },
                 {
                     "name": "Thibaud Fabre",
                     "email": "thibaud@aztech.io"
-                },
-                {
-                    "name": "Ben Ramsey",
-                    "email": "ben@benramsey.com",
-                    "homepage": "https://benramsey.com"
                 }
             ],
             "description": "Formerly rhumsaa/uuid. A PHP 5.4+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID).",
@@ -4618,8 +4638,8 @@
             "authors": [
                 {
                     "name": "Tijs Verkoyen",
-                    "role": "Developer",
-                    "email": "css_to_inline_styles@verkoyen.eu"
+                    "email": "css_to_inline_styles@verkoyen.eu",
+                    "role": "Developer"
                 }
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
@@ -4671,19 +4691,19 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "role": "Lead Developer",
                     "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org"
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Armin Ronacher",
-                    "role": "Project Founder",
-                    "email": "armin.ronacher@active-4.com"
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
                 },
                 {
                     "name": "Twig Team",
-                    "role": "Contributors",
-                    "homepage": "https://twig.symfony.com/contributors"
+                    "homepage": "https://twig.symfony.com/contributors",
+                    "role": "Contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -4987,6 +5007,7 @@
                 "faker",
                 "fixtures"
             ],
+            "abandoned": true,
             "time": "2018-07-12T10:23:15+00:00"
         },
         {
@@ -5046,29 +5067,35 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mavinoo/laravelBatch.git",
-                "reference": "e42eb9e29297b74d7b4ac598613889219b7ea6eb"
+                "reference": "c6949ca4ce60712389cd405b8717c9732ed3018a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mavinoo/laravelBatch/zipball/e42eb9e29297b74d7b4ac598613889219b7ea6eb",
-                "reference": "e42eb9e29297b74d7b4ac598613889219b7ea6eb",
+                "url": "https://api.github.com/repos/mavinoo/laravelBatch/zipball/c6949ca4ce60712389cd405b8717c9732ed3018a",
+                "reference": "c6949ca4ce60712389cd405b8717c9732ed3018a",
                 "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.3@dev"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Mavinoo\\LaravelBatch\\LaravelBatchServiceProvider"
+                        "Mavinoo\\Batch\\BatchServiceProvider"
                     ],
                     "aliases": {
-                        "Batch": "Mavinoo\\LaravelBatch\\LaravelBatchFacade"
+                        "Batch": "Mavinoo\\Batch\\BatchFacade"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Mavinoo\\LaravelBatch\\": "src/"
-                }
+                    "Mavinoo\\Batch\\": "src/"
+                },
+                "files": [
+                    "src/Common/Helpers.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5077,11 +5104,11 @@
             "authors": [
                 {
                     "name": "Mohammad Ghanbari",
-                    "email": "wordpress.iran@gmail.com"
+                    "email": "mavin.developer@gmail.com"
                 }
             ],
             "description": "Insert and update batch (bulk) in laravel",
-            "time": "2019-04-14T05:31:07+00:00"
+            "time": "2020-09-15T13:56:00+00:00"
         },
         {
             "name": "meyfa/phpunit-assert-gd",
@@ -5491,8 +5518,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sb@sebastian-bergmann.de"
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
                 }
             ],
             "description": "FilterIterator implementation that filters files based on a list of suffixes.",
@@ -5533,8 +5560,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "Simple template engine.",
@@ -5582,8 +5609,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sb@sebastian-bergmann.de"
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
                 }
             ],
             "description": "Utility class for timing",
@@ -5640,6 +5667,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2017-11-27T05:48:46+00:00"
         },
         {
@@ -5821,13 +5849,13 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sb@sebastian-bergmann.de"
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
                 },
                 {
                     "name": "Giorgio Sironi",
-                    "role": "developer",
-                    "email": "info@giorgiosironi.com"
+                    "email": "info@giorgiosironi.com",
+                    "role": "developer"
                 }
             ],
             "description": "Selenium Server integration for PHPUnit",
@@ -6344,8 +6372,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
@@ -6424,5 +6452,6 @@
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.3"
-    }
+    },
+    "plugin-api-version": "1.1.0"
 }
